@@ -32,6 +32,8 @@
 
 - Models
     - State
+    
+        state是存放状态的容器
     - Action
     
         Action 是一个普通 javascript 对象，它是改变 State 的唯一途径。
@@ -61,6 +63,7 @@
     
         Subscriptions是一种从源获取数据的方法，数据源可以是当前的时间、keyboard、history路由变化等。
 
+Models示例：
 ```
 export default {
     namespace: 'example',    
