@@ -1,3 +1,12 @@
+function deplay(num){
+    console.log(num,111)
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve()
+        },num)
+    })
+}
+
 export default {
     namespace: 'delaylist',
     state: [
@@ -8,22 +17,16 @@ export default {
     ],
     subscriptions: {},
     reducers: {
-        'delete'(state,{payload}){
-            console.log(state,11)
+        delete(state,{payload}){
+            console.log(33)
         }
     },
     effects: {
-        *deleted({payload}, {call, put, select}) {
+        *delete({payload}, {call, put, select}) {
+            console.log(22)
             yield call(deplay,1000);
-            yield put({type:'delete'})
+            yield put({type:'delaylist/delete'})
         }
     }
 }
 
-function deplay(num){
-    return new Promise((resolve, reject) => {
-        setTimeout(()=>{
-            resolve()
-        },num)
-    })
-}
