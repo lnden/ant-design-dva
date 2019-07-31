@@ -22,7 +22,12 @@
     margin-top: 1.8em;
     list-style: none;
     line-height: 1.5em;
+    text-align: left;
 }
+.list li{
+    margin-top: 10px;
+}
+
 
 .list code {
     background: #f7f7f7;
