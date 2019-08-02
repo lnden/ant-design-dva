@@ -4,7 +4,6 @@ import Delaylist from '../components/Delaylist'
 
 const DelayList = ({dispatch,delaylist}) => {
     function handleDelete(id){
-        console.log(id)
         dispatch({
             type: 'delaylist/delete',
             payload: id
