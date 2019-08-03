@@ -4,6 +4,7 @@ import {Button} from 'antd'
 import IndexPage from './routes/IndexPage';
 import Products from './routes/Products';
 import Delaylist from './routes/delayList'
+import Loading from './routes/loading.js'
 
 function RouterConfig({history}) {
     function handleClick(){
@@ -17,6 +18,7 @@ function RouterConfig({history}) {
                     <Route path="/" exact component={IndexPage}/>
                     <Route path="/products" component={Products}/>
                     <Route path="/delaylist" component={Delaylist}/>
+                    <Route path="/loading" component={Loading}/>
                 </Switch>
             </Router>
         </section>
