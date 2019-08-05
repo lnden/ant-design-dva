@@ -85,3 +85,28 @@ export default {
 };
 
 ```
+
+### dva同步异步执行顺序
+
+view组件执行dispatch方法
+```angular2html
+    dispatch({
+        type:'delete',
+        payload:id
+    })
+```
+models里面异步同步都有这个delete方法，此时先执行同步，在执行异步
+
+```angular2html
+const models = {
+    namespace:'test',
+    state:{},
+    subscriptions:{},
+    effects:{
+        *delete(action,{call,put,select}){}
+    },
+    reducers:{
+        delete(state,action){}
+    }
+}
+```
