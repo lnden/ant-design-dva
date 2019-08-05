@@ -110,3 +110,15 @@ const models = {
     }
 }
 ```
+
+### 版本介绍
+npm i dva-cli -g 全局按照dva-cli版本
+```$xslt
+    dva-cli version 1.0.0-beta.4
+```
+
+npm i dva-cli@next -g 全局安装dva-cli@next版本[此版本dva介入umi]
+```$xslt
+    dva-cli version 0.10.1
+```
+
