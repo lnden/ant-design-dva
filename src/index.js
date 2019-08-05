@@ -20,6 +20,7 @@ app.use(createLoading());
 // app.model(require('./models/example').default);
 app.model(require('./models/products').default);
 app.model(require('./models/delayList').default);
+app.model(require('./models/count').default);
 
 // 4. Router
 app.router(require('./router').default);
