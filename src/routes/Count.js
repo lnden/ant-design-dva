@@ -1,19 +1,20 @@
 import React from 'react'
 import {connect} from 'dva'
+import { Button } from 'antd'
 import Count from '../components/Count'
 
 function Viewshow(props) {
     return (
         <div className="button">
 
-            <button onClick={() => {
+            <Button onClick={() => {
                 props.dispatch({type: 'count/add'})
             }}>+
-            </button>
-            <button style={{margin:'0 20px'}}  onClick={() => {
+            </Button>
+            <Button style={{margin:'0 20px'}}  onClick={() => {
                 props.dispatch({type: 'count/minus'})
             }}>-
-            </button>
+            </Button>
             <Count count={props.count}/>
         </div>
     )

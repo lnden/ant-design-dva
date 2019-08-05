@@ -3,11 +3,14 @@ import { connect } from 'dva';
 import Loadings from '../components/Loading'
 
 function Loading({ dispatch, loading }) {
-    console.log(loading, 111)
+    function handleClick(){
+        dispatch({
+            type:'load/change'
+        })
+    }
     return (
         <section>
-            <Loadings />
-
+            <Loadings onRequest={handleClick} loading={loading}/>
         </section>
     )
 }

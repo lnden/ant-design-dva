@@ -16,17 +16,18 @@ function RouterConfig({history}) {
         <section>
             <div style={{padding: '20px'}}>
                 <p><Button onClick={handleClick}>返回首页</Button></p>
-                <Router history={history}>
-                    <Switch>
-                        <Route path="/" exact component={IndexPage}/>
-                        <Route path="/products" component={Products}/>
-                        <Route path="/delaylist" component={Delaylist}/>
-                        <Route path="/loading" component={Loading}/>
-                        <Route path="/count" component={Count}/>
-                    </Switch>
-                </Router>
+                <div style={{marginLeft:'30px'}}>
+                    <Router history={history}>
+                        <Switch>
+                            <Route path="/" exact component={IndexPage}/>
+                            <Route path="/products" component={Products}/>
+                            <Route path="/delaylist" component={Delaylist}/>
+                            <Route path="/loading" component={Loading}/>
+                            <Route path="/count" component={Count}/>
+                        </Switch>
+                    </Router>
+                </div>
             </div>
-
         </section>
 
     );

@@ -47,7 +47,7 @@ const Products = ({dispatch, products}) => {
     }
 
     return (
-        <div style={{textAlign: 'center'}}>
+        <div>
             <h2>List of Products</h2>
             <ProductList onDelete={handleDelete} products={products}/>
             <Father/>
