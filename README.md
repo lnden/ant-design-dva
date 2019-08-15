@@ -130,3 +130,8 @@ npm i dva-cli@next -g 全局安装dva-cli@next版本[此版本dva介入umi]
     dva-cli version 0.10.1
 ```
 
+### 项目工程化
+
+- 添加utils/filter.js
+- 添加utils/cookies.js
+- 添加utils/verify.js
