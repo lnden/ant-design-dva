@@ -135,3 +135,9 @@ npm i dva-cli@next -g 全局安装dva-cli@next版本[此版本dva介入umi]
 - 添加utils/filter.js
 - 添加utils/cookies.js
 - 添加utils/verify.js
+
+### Plugin
+
+- yarn add dva-loading -S
+- yarn add react-document-title -S
+- yarn add react-document-title -S

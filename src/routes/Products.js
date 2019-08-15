@@ -38,7 +38,7 @@ class Father extends React.Component {
 //-------------------------------end
 
 
-const Products = ({dispatch, products}) => {
+const Products = ({dispatch, products,location}) => {
     function handleDelete(id) {
         dispatch({
             type: 'products/delete',
@@ -49,7 +49,7 @@ const Products = ({dispatch, products}) => {
     return (
         <div>
             <h2>List of Products</h2>
-            <ProductList onDelete={handleDelete} products={products}/>
+            <ProductList onDelete={handleDelete} products={products} location={location}/>
             <Father/>
         </div>
     )
