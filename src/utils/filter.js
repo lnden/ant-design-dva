@@ -28,4 +28,6 @@ import {
 } from '../config/constant';
 
 const optionsFilter = OPTIONS => value => OPTIONS.find(item => item.value === value)?.label || '';
+
 export const genderFilter = optionsFilter(GENDER_OPTIONS);
+export const feedbackStatusFilter = status => ['', '已提交', '已受理', '已完成'][status || 0];
