@@ -1,6 +1,5 @@
 import {isObject} from "./verify";
 
-
 /**
  * 对象转换字符串
  *
@@ -75,4 +74,3 @@ export const createAction = type => payload => ({
     type,
     payload,
 });
-

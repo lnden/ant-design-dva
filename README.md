@@ -140,4 +140,15 @@ npm i dva-cli@next -g 全局安装dva-cli@next版本[此版本dva介入umi]
 
 - yarn add dva-loading -S
 - yarn add react-document-title -S
-- yarn add react-document-title -S
+- yarn add path-to-regexp -S
+- yarn add lodash -S
+    - lodash.isEqual //深比较
+    - lodash.cloneDeep  //深复制
+
+
+### 知识点
+
+- some  返回true、false
+- filter  返回为真的对象
+- import isEqual from 'lodash/isEqual';
+- import cloneDeep from 'lodash/cloneDeep';
