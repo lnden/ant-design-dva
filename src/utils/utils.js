@@ -1,4 +1,5 @@
 import {isObject} from "./verify";
+import cloneDeep from 'lodash/cloneDeep';
 
 /**
  * 对象转换字符串
@@ -74,3 +75,85 @@ export const createAction = type => payload => ({
     type,
     payload,
 });
+
+/**
+ * 获取路由All对象
+ *
+ * @param getPlainRoute(routers.children)
+ * @return route.children list
+ *
+ * Explain
+ *  该方法为回调
+ *  回调修改path、exact的值，并且返回一个新的children list
+ *
+ */
+const getPlainRoute = (routes, parentPath = '') => {
+    const arr = [];
+    routes.forEach(route => {
+        const item = route;
+        item.path = `${parentPath}/${item.path || ''}`.replace(/\/+/g, '/');
+        item.exact = true;
+        if (item.children && !item.component) {
+            arr.push(...getPlainRoute(item.children, item.path));
+        } else {
+            if (item.children && item.component) {
+                item.exact = false;
+            }
+            arr.push(item);
+        }
+    });
+    return arr;
+};
+
+/**
+ * 获取路由对象
+ *
+ * @param getRouteData(routers,'UserLayout')
+ * @return route.children list
+ *
+ * @Explain
+ *  该方法获取（路由集合，路由名称），深拷贝名称相等的Route
+ *  调用回调方法获取所有路由
+ *
+ * Routers
+ *
+ */
+export const getRouteData = (navData, layoutName) => {
+    if (
+        !navData.some(item => item.layout === layoutName) ||
+        !navData.filter(item => item.layout === layoutName)[0].children
+    ) {
+        return null;
+    }
+    const route = cloneDeep(navData.filter(item => item.layout === layoutName)[0]);
+    return getPlainRoute(route.children);
+};
+
+
+
+const routers = [
+    {
+        "layout":"UserLayout",
+        "children":[
+            {
+                "path":"user",
+                "children":[
+                    {
+                        "path":"login",
+                        "name":"登录"
+                    },
+                    {
+                        "path":"resetPassword",
+                        "name":"重置密码"
+                    },
+                    {
+                        "path":"register",
+                        "name":"注册"
+                    }
+                ]
+            }
+        ],
+        "path":"/",
+        "exact":false
+    }
+]

@@ -144,6 +144,8 @@ npm i dva-cli@next -g 全局安装dva-cli@next版本[此版本dva介入umi]
 - yarn add lodash -S
     - lodash.isEqual //深比较
     - lodash.cloneDeep  //深复制
+    
+- yarn add memoize-one -S  [Blog地址memoize-one](https://liyang0207.github.io/2018/10/11/%E3%80%8A%E8%AE%B0%E5%BF%86%E5%8C%96%E6%8A%80%E6%9C%AFmemoize-one%E3%80%8B/)
 
 
 ### 知识点
