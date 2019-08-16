@@ -155,3 +155,10 @@ npm i dva-cli@next -g 全局安装dva-cli@next版本[此版本dva介入umi]
 - filter  返回为真的对象
 - import isEqual from 'lodash/isEqual';
 - import cloneDeep from 'lodash/cloneDeep';
+
+
+### New Add
+
+- 公共页脚组件
+- 公共头部组件
+- 公共信息组件
