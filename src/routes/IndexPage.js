@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {connect} from 'dva';
 import {Link} from 'dva/router'
 import {Button} from 'antd'
 import styles from './IndexPage.less';
 import {ContainerQuery} from 'react-container-query';
 import classNames from 'classnames'
+import GlobalFooter from '../components/GlobalFooter'
 
 const query = {
     'screen-xs': {
@@ -31,6 +32,14 @@ const query = {
     },
 };
 
+const links = [
+    {key: 1, blankTarget: true, title: '百度', href: 'https://www.baidu.com/'},
+    {key: 2, blankTarget: false, title: '淘宝', href: 'https://www.taobao.com/'},
+    {key: 3, blankTarget: true, title: '新浪', href: 'https://www.sina.com.cn/'},
+    {key: 4, blankTarget: true, title: '腾讯', href: 'https://www.qq.com/'},
+]
+const copyright = <Fragment>© 2019 北京xxx科技有限公司</Fragment>;
+
 function IndexPage() {
     function renderLayout(params) {
         const layout = (
@@ -43,6 +52,7 @@ function IndexPage() {
                 </ul>
                 <h1 className={styles.title}>Yay! Welcome to dva!</h1>
                 <div className={styles.welcome}/>
+                <GlobalFooter className={styles.custom} links={links} copyright={copyright}/>
             </div>
         );
         return <div className={classNames(params)}>{layout}</div>
