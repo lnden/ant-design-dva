@@ -2070,6 +2070,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+batch-processor@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/batch-processor/-/batch-processor-1.0.0.tgz#75c95c32b748e0850d10c2b168f6bdbe9891ace8"
+  integrity sha1-dclcMrdI4IUNEMKxaPa9vpiRrOg=
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
@@ -2918,6 +2923,11 @@ constants-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
+container-query-toolkit@0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/container-query-toolkit/-/container-query-toolkit-0.1.3.tgz#79ece9fe491d9187b7051247067f1faac6ce00b0"
+  integrity sha512-B1EvYaLzFKz81vgWDm+zL0X7fzFUjlN6lF/RivDeNT4xW9mFsTh1oiC9rtvFFiwG52e3JUmYLXwPpqNBf2AXHA==
+
 contains-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/contains-path/-/contains-path-0.1.0.tgz#fe8cf184ff6670b6baef01a9d4861a5cbec4120a"
@@ -3748,6 +3758,13 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.191, electron-to-chromium
   version "1.3.204"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.204.tgz#1ea5c6d495bab77995aa135dbcbc1d383dd4e21e"
   integrity sha512-T0eXE6hfbtpzRUaI7aHI/HYJ29Ndk84aVSborRAmXfWvBvz2EuB2OWYUxNcUX9d+jtqEIjgZjWMdoxS0hp5j1g==
+
+element-resize-detector@1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/element-resize-detector/-/element-resize-detector-1.1.13.tgz#f61907e98a91b1ad215f92790bc15113df68444d"
+  integrity sha1-9hkH6YqRsa0hX5J5C8FRE99oRE0=
+  dependencies:
+    batch-processor "^1.0.0"
 
 elliptic@^6.0.0:
   version "6.5.0"
@@ -9148,6 +9165,14 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-container-query@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/react-container-query/-/react-container-query-0.11.0.tgz#b07ac2794612499dd8f2d1759b72e9c415e53567"
+  integrity sha512-J/RaSUK0g1gIyxpFh2H1g9eMirpJG8PBtTJ2DPWmme4R8SHwIsYIiJgIGkYs59vDhWrA8dG9iUEfqU4DJpX44A==
+  dependencies:
+    container-query-toolkit "0.1.3"
+    resize-observer-lite "0.2.3"
+
 react-dev-utils@^5.0.0:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-5.0.3.tgz#92f97668f03deb09d7fa11ea288832a8c756e35e"
@@ -9700,6 +9725,13 @@ reselect@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
   integrity sha1-79qpjqdFEyTQkrKyFjpqHXqaIUc=
+
+resize-observer-lite@0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/resize-observer-lite/-/resize-observer-lite-0.2.3.tgz#b557f378e2ce9b9aab1dc71a91047bd7ed1d8915"
+  integrity sha512-k/p+pjCTQkQ7x94bWsxcVwEJI5SrcO95j7czrCKMpHjXFQ+HmKRGLTdAkZoL3+wG1Pe/4L9Sl652zy9lU54dFg==
+  dependencies:
+    element-resize-detector "1.1.13"
 
 resize-observer-polyfill@^1.5.0, resize-observer-polyfill@^1.5.1:
   version "1.5.1"
