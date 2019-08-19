@@ -3,19 +3,19 @@ import {connect} from 'dva'
 import { Button } from 'antd'
 import Count from '../components/Count'
 
-function Viewshow(props) {
+function Viewshow({dispatch,count}) {
     return (
         <div className="button">
 
             <Button onClick={() => {
-                props.dispatch({type: 'count/add'})
+                dispatch({type: 'count/add'})
             }}>+
             </Button>
             <Button style={{margin:'0 20px'}}  onClick={() => {
-                props.dispatch({type: 'count/minus'})
+                dispatch({type: 'count/minus'})
             }}>-
             </Button>
-            <Count count={props.count}/>
+            <Count count={count.count}/>
         </div>
     )
 }

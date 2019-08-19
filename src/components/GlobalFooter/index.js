@@ -3,7 +3,7 @@ import classMames from 'classnames'
 import styles from './index.module.less'
 
 const GlobalFooter = ({className, links, copyright}) => {
-    console.log(className,1111)
+    // console.log(className,1111)
     const clsString = classMames(styles.globalFooter, className);
     return (
         <div className={clsString}>
