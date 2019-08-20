@@ -8,6 +8,7 @@ import Loading from './routes/loading'
 import Count from './routes/Count'
 import Home from './routes/Home'
 import Discover from './components/Discover'
+import NotFound from './pages/Exception/404'
 
 function RouterConfig({history}) {
     function handleClick() {
@@ -28,6 +29,7 @@ function RouterConfig({history}) {
                             <Route path="/count" component={Count}/>
                             <Route path="/home" component={Home}/>
                             <Route path="/discover" component={Discover}/>
+                            <Route component={NotFound} />
                         </Switch>
                     </Router>
                 </div>
